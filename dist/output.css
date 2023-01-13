@@ -1870,8 +1870,20 @@ html {
   width: 13rem;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .rounded-xl {

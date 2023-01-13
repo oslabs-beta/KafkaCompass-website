@@ -2,6 +2,7 @@ import React,  { useRef }  from "react";
 import AboutUs from "./AboutUs";
 import LogoWithoutText from "./static/logo_without_text.png";
 import Navbar from "./nav-bar";
+import KafkaCompassPerformanceStatsDemo from "./static/KafkaCompassPerformanceStatsDemo.gif";
 
 const App = (props) => {
     const myRef = useRef(null);
@@ -35,9 +36,17 @@ const App = (props) => {
                         <button onClick={executeScroll} className="btn btn-outline" >Meet the team</button>
                      </div>
             </div>
-        </div>
+            <article className="flex-1 flex-row justify-around">
+                <div><img src={KafkaCompassPerformanceStatsDemo}></img></div>
+                <div><p>View an advanced suite of cluster metrics in Performance Statistics!</p></div>
+            </ article>
+            <article className="flex-1 flex-row justify-around">
+                <div><p>Monitor the content of your cluster</p></div>
+                <div><img src={KafkaCompassPerformanceStatsDemo}></img></div>
+            </ article>
         <div ref={myRef}>
             <AboutUs />
+        </div>
         </div>
         </main>
     )
