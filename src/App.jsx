@@ -6,15 +6,20 @@ import KafkaCompassPerformanceStatsDemo from "./static/KafkaCompassPerformanceSt
 
 const App = (props) => {
     const myRef = useRef(null);
+    const infoRef = useRef(null);
     const executeScroll = () => {
     myRef.current.scrollIntoView({ behavior: "smooth" });
+    };
+
+    const executeScrollToInfo = () => {
+        infoRef.current.scrollIntoView({ behavior: "smooth" });
     };
 
     return (
         <main>
             <Navbar />
-            <div className="first-page">
-            <div className="landing-container">
+            <div className="landing-container h-screen">
+            <div className="flex-1 justify-around">
             <article className="font-mono">
                 <img className="icon-logo my-2" src={LogoWithoutText} />
                 <h2 className="page-title text-lg ">Kafka Compass</h2>
@@ -29,25 +34,45 @@ const App = (props) => {
                 up and start monitoring!
                 </p>
             </article>
-                    <div className="landing-buttons my-3">
+                <div className="flex justify-around">
+                <div className="landing-buttons my-3 flex">
                         <form action="https://github.com/oslabs-beta/KafkaCompass">
                         <button className="btn btn-outline"> Navigate to Github Repository </button>
                         </form>
                         <button onClick={executeScroll} className="btn btn-outline" >Meet the team</button>
                      </div>
+                </div>
+            <article><h2 className="page-title text-lg"><i>Don't get lost navigating your Kafka clusters - grab a compass!</i></h2></article>
+            <div className="flex justify-around"><button onClick={executeScrollToInfo} className="btn btn-outline" >Learn More</button></div>
             </div>
-            <article className="flex-1 flex-row justify-around">
-                <div><img src={KafkaCompassPerformanceStatsDemo}></img></div>
-                <div><p>View an advanced suite of cluster metrics in Performance Statistics!</p></div>
+            </div>
+            <div>
+            <article ref={infoRef} className="flex-1 flex-row justify-around pb-10 px-10">
+                <div><img className="rounded" src={KafkaCompassPerformanceStatsDemo}></img></div>
+                <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">View an advanced suite of cluster metrics in Performance Statistics</h2>
+                        <p><i>Metrics are securely encrypted and stored for later reference in your personalized Cluster History page</i></p>
+                        <div className="card-actions justify-end">
+                        </div>
+                    </div>
+                </div>
             </ article>
-            <article className="flex-1 flex-row justify-around">
-                <div><p>Monitor the content of your cluster</p></div>
-                <div><img src={KafkaCompassPerformanceStatsDemo}></img></div>
+            <article className="flex-1 flex-row justify-around pb-10 px-10">
+                <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card-body">
+                        <h2 className="card-title">Monitor and modify the content of your cluster in Content Monitoring</h2>
+                        <p><i>Take control of your cluster, with the ability to add and delete topics, write messages, and consume messages, simply at the click of a button</i></p>
+                        <div className="card-actions justify-end">
+                        </div>
+                    </div>
+                </div>
+                <div><img className="rounded" src={KafkaCompassPerformanceStatsDemo}></img></div>
             </ article>
-        <div ref={myRef}>
-            <AboutUs />
-        </div>
-        </div>
+            </div>
+            <div ref={myRef}>
+                <AboutUs />
+            </div>
         </main>
     )
 }
