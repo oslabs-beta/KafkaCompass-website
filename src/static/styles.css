@@ -21,3 +21,77 @@ article {
   .icon-logo {
     width: 70px;
   }
+
+  .first-page {
+    height: 100vh;
+  }
+
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    margin: auto;
+    margin-top: 3rem;
+  }
+
+  .about-header {
+    text-align: center;
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .about-us {
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .about-body {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .bio-cardd {
+    height: 34rem;
+    margin: 1rem;
+  }
+  
+  .card-actions form button {
+    margin: 1rem;
+  }
+  
+  .bio-pic {
+    height: 25vh;
+    margin: 20px;
+  }
+  
+  .about-links {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+  }
+  
+  .landing-buttons button {
+    margin: 1rem;
+    width: 15rem;
+  }
+  
+  .table-history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .history-table {
+    width: 50rem;
+  }
+
+  .icon-logo {
+    width: 70px;
+  }
+
+  .navbar {
+    border-bottom: 1 px solid lightgray;
+    display: flex;
+  }

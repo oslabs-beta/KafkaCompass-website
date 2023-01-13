@@ -1,6 +1,7 @@
 import React,  { useRef }  from "react";
 import AboutUs from "./AboutUs";
 import LogoWithoutText from "./static/logo_without_text.png";
+import Navbar from "./nav-bar";
 
 const App = (props) => {
     const myRef = useRef(null);
@@ -10,6 +11,7 @@ const App = (props) => {
 
     return (
         <main>
+            <Navbar />
             <div className="first-page">
             <div className="landing-container">
             <article className="font-mono">
@@ -27,7 +29,9 @@ const App = (props) => {
                 </p>
             </article>
                     <div className="landing-buttons my-3">
-                        <button className="btn btn-outline"> Navigate to Dashboard </button>
+                        <form action="https://github.com/oslabs-beta/KafkaCompass">
+                        <button className="btn btn-outline"> Navigate to Github Repository </button>
+                        </form>
                         <button onClick={executeScroll} className="btn btn-outline" >Meet the team</button>
                      </div>
             </div>
