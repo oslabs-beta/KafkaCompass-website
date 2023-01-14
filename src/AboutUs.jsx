@@ -12,7 +12,7 @@ const AboutUs = () => {
     {
       name: "Daria Mordvinov",
       img: DariaMordvinov,
-      description: "Software Engineer. Drum player. Dogs admirer",
+      description: "Software Engineer",
       github: "https://github.com/DariaMordvinov",
       linkedin: "https://www.linkedin.com/in/dariamordvinov/"
     },
@@ -46,9 +46,9 @@ const AboutUs = () => {
     }
   ];
   return (
-    <div className="about-us font-mono py-20">
+    <div className="font-mono py-20">
       <h3 className="page-title">Meet the team</h3>
-      <div className="about-body drawer-content">
+      <div className="about-body drawer-content flex-wrap justify-center">
         <Card team={team} />
       </div>
     </div>

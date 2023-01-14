@@ -19,12 +19,12 @@ const App = (props) => {
     return (
         <main>
             <Navbar />
-            <div className="landing-container h-screen">
-            <div className="flex-1 justify-around ">
-            <article className="font-mono">
+            <div className="h-screen p-16 xl:mx-60 lg:mx-28 md:px-4 md:pb-8 sm:pb-56 xsm: mb-36">
+            <div className="flex-1 justify-around">
+            <article className="font-mono overflow-auto">
                 <img className="icon-logo my-2" src={LogoWithoutText} />
                 <h2 className="page-title text-lg">Kafka Compass</h2>
-                <p className="text-justify text-lg">
+                <p className="text-justify text-lg sm:break-normal">
                 Welcome to KafkaCompass: an open source tool to make your Kafka
                 experience easier. KafkaCompass will be your navigator while
                 working with Confluent Cloud. Get performance and content
@@ -35,7 +35,7 @@ const App = (props) => {
                 </p>
             </article>
                 <div className="flex justify-around">
-                <div className="landing-buttons my-3 flex">
+                <div className="landing-buttons my-3 flex sm:flex-col">
                         <form action="https://github.com/oslabs-beta/KafkaCompass">
                         <button className="btn btn-outline"> Github Repository </button>
                         </form>
@@ -47,8 +47,8 @@ const App = (props) => {
             </div>
             </div>
             <div>
-            <article ref={infoRef} className="flex-1 flex-row justify-around py-10 px-10">
-                <div><img className="rounded-lg" src={KafkaCompassPerformanceStatsDemo}></img></div>
+            <article ref={infoRef} className="flex-1 flex-row justify-around py-10 px-10 lgmax:flex-col-reverse">
+                <div className="lgmax:pt-10"><img className="rounded-lg" src={KafkaCompassPerformanceStatsDemo}></img></div>
                 <div className="card w-96 bg-base-100 shadow-xl">
                     <div className="card-body">
                         <h2 className="card-title">View an advanced suite of cluster metrics in Performance Statistics</h2>
@@ -58,7 +58,7 @@ const App = (props) => {
                     </div>
                 </div>
             </ article>
-            <article className="flex-1 flex-row justify-around pb-10 px-10">
+            <article className="flex-1 flex-row justify-around pb-0 px-10 lgmax:flex-col">
                 <div className="card w-96 bg-base-100 shadow-xl">
                     <div className="card-body">
                         <h2 className="card-title">Monitor and modify the content of your cluster in Content Monitoring</h2>
@@ -67,10 +67,10 @@ const App = (props) => {
                         </div>
                     </div>
                 </div>
-                <div><img className="rounded-lg" src={contentMonitoringScreenshot} height='1000px' width='600p' ></img></div>
+                <div className="lgmax:pt-10"><img className="rounded-lg" src={contentMonitoringScreenshot} height='1000px' width='600p' ></img></div>
             </ article>
             </div>
-            <div ref={myRef}>
+            <div ref={myRef} className="flex justify-around">
                 <AboutUs />
             </div>
         </main>

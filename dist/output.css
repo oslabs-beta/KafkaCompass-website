@@ -1494,6 +1494,10 @@ html {
   margin-bottom: 0.75rem;
 }
 
+.mb-36 {
+  margin-bottom: 9rem;
+}
+
 .flex {
   display: flex;
 }
@@ -1514,6 +1518,10 @@ html {
   flex-direction: row;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .items-center {
   align-items: center;
 }
@@ -1522,8 +1530,16 @@ html {
   justify-content: flex-end;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-around {
   justify-content: space-around;
+}
+
+.overflow-auto {
+  overflow: auto;
 }
 
 .rounded-lg {
@@ -1549,6 +1565,10 @@ html {
      object-fit: cover;
 }
 
+.p-16 {
+  padding: 4rem;
+}
+
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -1564,8 +1584,8 @@ html {
   padding-right: 2.5rem;
 }
 
-.pb-10 {
-  padding-bottom: 2.5rem;
+.pb-0 {
+  padding-bottom: 0px;
 }
 
 .text-center {
@@ -1634,8 +1654,8 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60vw;
-  margin: auto;
+  /* width: 60vw; */
+  /* margin: auto; */
   margin-top: 3rem;
 }
 
@@ -1656,7 +1676,7 @@ article {
 }
 
 .bio-cardd {
-  height: 34rem;
+  /* height: 34rem; */
   margin: 1rem;
 }
 
@@ -1697,4 +1717,70 @@ article {
 .navbar {
   border-bottom: 1 px solid lightgray;
   display: flex;
+}
+
+@media (max-width: 640px) {
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
+  .sm\:break-normal {
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .sm\:pb-56 {
+    padding-bottom: 14rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
+  .md\:flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:pb-8 {
+    padding-bottom: 2rem;
+  }
+
+  .md\:pt-10 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lgmax\:flex-col {
+    flex-direction: column;
+  }
+
+  .lgmax\:flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .lgmax\:pt-10 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:mx-28 {
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:mx-60 {
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
 }
