@@ -23,7 +23,7 @@ const App = (props) => {
             <div className="flex-1 justify-around ">
             <article className="font-mono">
                 <img className="icon-logo my-2" src={LogoWithoutText} />
-                <h2 className="page-title text-lg ">Kafka Compass</h2>
+                <h2 className="page-title text-lg">Kafka Compass</h2>
                 <p className="text-justify text-lg">
                 Welcome to KafkaCompass: an open source tool to make your Kafka
                 experience easier. KafkaCompass will be your navigator while
@@ -31,8 +31,7 @@ const App = (props) => {
                 statistics to monitor your Kafka cluster, view messages in your
                 topics, and check your cluster's history snapshots to see how you
                 cluster's performance changed over time. All you need to get
-                started is a running Kafka cluster in your Confluent Cloud. Sign
-                up and start monitoring!
+                started is a running Kafka cluster in your Confluent Cloud. Clone and run our respository, sign up, and start monitoring!
                 </p>
             </article>
                 <div className="flex justify-around">
@@ -43,12 +42,12 @@ const App = (props) => {
                         <button onClick={executeScrollToInfo} className="btn btn-outline" >Learn More</button>
                      </div>
                 </div>
-            <article><h2 className="page-title text-lg"><i>Don't get lost navigating your Kafka clusters - grab a compass!</i></h2></article>
+            <article><h2 className="page-title"><i>Don't get lost navigating your Kafka clusters - grab a compass!</i></h2></article>
             <div className="flex justify-around"><button onClick={executeScroll} className="btn btn-outline" >Meet the team</button></div>
             </div>
             </div>
             <div>
-            <article ref={infoRef} className="flex-1 flex-row justify-around pb-10 px-10">
+            <article ref={infoRef} className="flex-1 flex-row justify-around py-10 px-10">
                 <div><img className="rounded-lg" src={KafkaCompassPerformanceStatsDemo}></img></div>
                 <div className="card w-96 bg-base-100 shadow-xl">
                     <div className="card-body">
